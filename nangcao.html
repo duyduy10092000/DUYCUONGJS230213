@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nangcao.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="feedback">FeedbackTA</h1>
+    <div class="tong">
+        <div class="thayphu">Thầy phú dạy em có hay không?</div>
+        <div class="Number">
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div class="number">10</div>
+        </div>
+        <div class="seach">
+            <input type="text" id="nhap" placeholder="Nhập ý kiến của bạn" > 
+            <button onclick="seach()" id="button">seach</button>
+        </div>
+    </div>
+    <div id="table"></div>
+    <script>
+        addtong=[]
+        function seach() {
+            let add=document.getElementById("nhap").value;
+            let addnhap= {
+                Add :add
+            } 
+            addtong.push(addnhap);
+            document.getElementById("nhap").value = "";
+            rederadd()
+        } 
+        function rederadd(){
+            result= `<div>    
+                <div></div>
+                <div>`
+                for(let i =0;i<addtong.length;i++){
+                    result+=
+                
+                    `<div id="CSS"
+                    <div >
+                    ${addtong[i].Add}
+                </div>
+                </div>
+                `
+                }
+                document.getElementById("table").innerHTML=result;
+            JSON.parse()
+        }
+                
+    </script>
+</body>
+</html>
